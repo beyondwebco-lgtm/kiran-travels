@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Phone, MessageCircle, MapPin, ShieldCheck, Heart } from 'lucide-react';
-import { BUSINESS_INFO, POPULAR_ROUTES, SERVICES_LIST } from '@/data/travelData';
+import { BUSINESS_INFO, POPULAR_ROUTES, SERVICES_LIST, SERVICE_AREAS } from '@/data/travelData';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -40,16 +41,16 @@ export default function Footer() {
 
           {/* Quick Links Col */}
           <div className={styles.linksCol}>
-            <h4 className={styles.colTitle}>Navigation</h4>
+            <h4 className={styles.colTitle}>Local Hubs &amp; Pages</h4>
             <ul className={styles.linkList}>
-              <li><a href="#home" className={styles.footerLink}>Home</a></li>
-              <li><a href="#booking-form" className={styles.footerLink}>Book Your Ride</a></li>
-              <li><a href="#services" className={styles.footerLink}>Our Services</a></li>
-              <li><a href="#routes" className={styles.footerLink}>Routes &amp; Fares</a></li>
-              <li><a href="#fleet" className={styles.footerLink}>Vehicle Fleet</a></li>
-              <li><a href="#why-us" className={styles.footerLink}>Why Choose Us</a></li>
-              <li><a href="#about" className={styles.footerLink}>About Us</a></li>
-              <li><a href="#faq" className={styles.footerLink}>FAQs &amp; Terms</a></li>
+              <li><Link href="/" className={styles.footerLink}>Home</Link></li>
+              <li><Link href="/chilakaluripeta-car-rental" className={styles.footerLink}>Chilakaluripeta (Home Base)</Link></li>
+              <li><Link href="/car-rental-guntur" className={styles.footerLink}>Car Rental in Guntur</Link></li>
+              <li><Link href="/outstation-cabs-vijayawada" className={styles.footerLink}>Vijayawada Outstation</Link></li>
+              <li><a href="/#routes" className={styles.footerLink}>Routes &amp; Fares</a></li>
+              <li><a href="/#fleet" className={styles.footerLink}>Swift Dzire &amp; Ertiga</a></li>
+              <li><a href="/#about" className={styles.footerLink}>About Us</a></li>
+              <li><a href="/#faq" className={styles.footerLink}>FAQs &amp; Terms</a></li>
             </ul>
           </div>
 
@@ -126,6 +127,21 @@ export default function Footer() {
                 <span>Chat on WhatsApp</span>
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* Service Locations & Corridors Row */}
+        <div className={styles.serviceAreasBar}>
+          <span className={styles.serviceAreasTitle}>Primary Service Locations &amp; Connecting Corridors:</span>
+          <div className={styles.serviceAreasList}>
+            {SERVICE_AREAS.map((area, idx) => (
+              <React.Fragment key={area.name}>
+                <Link href={area.slug} className={styles.areaLink} title={`${area.name} (${area.role})`}>
+                  {area.name}
+                </Link>
+                {idx < SERVICE_AREAS.length - 1 && <span className={styles.areaDot}>•</span>}
+              </React.Fragment>
+            ))}
           </div>
         </div>
 

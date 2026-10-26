@@ -1,0 +1,445 @@
+.localPage {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--color-slate-400);
+  margin-bottom: 24px;
+}
+
+.breadcrumb a {
+  color: var(--color-slate-300);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-gold-400);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-gold-400);
+  font-weight: 600;
+}
+
+/* Local Hero */
+.localHero {
+  background: linear-gradient(180deg, #0D162B 0%, #080D1A 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: clamp(28px, 5vw, 48px);
+  margin-bottom: 48px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.localHero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(247, 185, 40, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-400);
+  background: rgba(247, 185, 40, 0.08);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.h1Title {
+  font-size: clamp(1.8rem, 4.5vw, 2.75rem);
+  font-weight: 900;
+  color: var(--color-white);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.leadText {
+  font-size: 1.05rem;
+  color: var(--color-slate-200);
+  line-height: 1.6;
+  max-width: 820px;
+  margin-bottom: 24px;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.heroTrustRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.82rem;
+  color: var(--color-slate-300);
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trustIcon {
+  color: var(--color-gold-400);
+}
+
+/* Service Scope & Operational Clarity */
+.scopeCard {
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-bottom: 48px;
+}
+
+.scopeHeading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.scopeText {
+  font-size: 0.92rem;
+  color: var(--color-slate-300);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.areasTagsRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.areaTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-slate-200);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+}
+
+/* Local Routes Grid */
+.sectionHeader {
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.sectionSubtitle {
+  font-size: 0.92rem;
+  color: var(--color-slate-400);
+  line-height: 1.5;
+}
+
+.routesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+  .routesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.routeCard {
+  background: linear-gradient(180deg, #101930 0%, #090E1D 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+}
+
+.routeCard:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.routeFromTo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.routeDistance {
+  font-size: 0.78rem;
+  color: var(--color-slate-400);
+  margin-bottom: 16px;
+}
+
+.routeFareBox {
+  background: rgba(247, 185, 40, 0.06);
+  border: 1px dashed var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.fareLabel {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-slate-300);
+  text-transform: uppercase;
+}
+
+.fareAmount {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-gold-400);
+  line-height: 1.1;
+}
+
+.fareSub {
+  font-size: 0.7rem;
+  color: var(--color-slate-400);
+}
+
+.routeClarification {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.routeActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.routeActions .btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+}
+
+/* One-Way Offer Card */
+.offerCard {
+  background: linear-gradient(135deg, #132244 0%, #0A0F1F 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.offerLeft {
+  max-width: 680px;
+}
+
+.offerTag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-400);
+  margin-bottom: 6px;
+}
+
+.offerTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.offerText {
+  font-size: 0.9rem;
+  color: var(--color-slate-300);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.offerRules {
+  font-size: 0.78rem;
+  color: var(--color-gold-400);
+  line-height: 1.45;
+}
+
+/* Trip Charges Clarification */
+.tripChargesCard {
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 48px;
+}
+
+.chargesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (min-width: 640px) {
+  .chargesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.chargeItem {
+  background: rgba(8, 13, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.chargeItem strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--color-gold-400);
+  margin-bottom: 4px;
+}
+
+.chargeItem p {
+  font-size: 0.82rem;
+  color: var(--color-slate-300);
+  line-height: 1.5;
+}
+
+.policyNotice {
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: rgba(247, 185, 40, 0.06);
+  border-left: 3px solid var(--color-gold-400);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.82rem;
+  color: var(--color-slate-300);
+  line-height: 1.5;
+}
+
+.policyNotice strong {
+  color: var(--color-gold-400);
+}
+
+/* Local FAQs */
+.faqSection {
+  margin-bottom: 48px;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faqCard {
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+}
+
+.faqQuestion {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.faqAnswer {
+  font-size: 0.88rem;
+  color: var(--color-slate-300);
+  line-height: 1.6;
+}
+
+/* Interlinking Box */
+.interlinksCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.interlinksHeading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.linksList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.internalLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-gold-400);
+  background: rgba(247, 185, 40, 0.08);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  transition: all var(--transition-fast);
+}
+
+.internalLink:hover {
+  background: var(--color-gold-400);
+  color: #080D1A;
+  transform: translateY(-1px);
+}

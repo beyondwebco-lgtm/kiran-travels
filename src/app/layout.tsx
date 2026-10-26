@@ -96,10 +96,17 @@ export default function RootLayout({
     areaServed: [
       { '@type': 'AdministrativeArea', name: 'Chilakaluripeta' },
       { '@type': 'AdministrativeArea', name: 'Guntur' },
+      { '@type': 'AdministrativeArea', name: 'Vijayawada' },
+      { '@type': 'AdministrativeArea', name: 'Tenali' },
+      { '@type': 'AdministrativeArea', name: 'Narasaraopet' },
+      { '@type': 'AdministrativeArea', name: 'Sattenapalle' },
+      { '@type': 'AdministrativeArea', name: 'Bapatla' },
+      { '@type': 'AdministrativeArea', name: 'Ponnur' },
+      { '@type': 'AdministrativeArea', name: 'Mangalagiri' },
+      { '@type': 'AdministrativeArea', name: 'Amaravati' },
       { '@type': 'AdministrativeArea', name: 'Andhra Pradesh' },
       { '@type': 'AdministrativeArea', name: 'Hyderabad' },
       { '@type': 'AdministrativeArea', name: 'Srisailam' },
-      { '@type': 'AdministrativeArea', name: 'Chennai' },
     ],
     provider: {
       '@type': 'LocalBusiness',

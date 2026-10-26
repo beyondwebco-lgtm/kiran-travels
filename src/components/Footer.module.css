@@ -197,6 +197,48 @@
   text-transform: uppercase;
 }
 
+/* Service Locations Bar */
+.serviceAreasBar {
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.serviceAreasTitle {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-gold-400);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.serviceAreasList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  font-size: 0.8rem;
+}
+
+.areaLink {
+  color: var(--color-slate-300);
+  transition: color var(--transition-fast);
+}
+
+.areaLink:hover {
+  color: var(--color-gold-400);
+  text-decoration: underline;
+}
+
+.areaDot {
+  color: rgba(255, 255, 255, 0.2);
+}
+
 /* Footer Bottom */
 .footerBottom {
   display: flex;

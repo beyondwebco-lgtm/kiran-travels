@@ -71,40 +71,72 @@ export const BUSINESS_INFO = {
     'Have a question about pricing, tolls, driver allowance, permits, trip duration or cancellation? Contact Kiran Travels directly on WhatsApp for clarification and a confirmed quotation.',
 
   cancellationPolicyNotice:
-    'For cancellation, rescheduling and refund-related queries, please contact Kiran Travels directly on WhatsApp. Applicable terms will be communicated and confirmed before booking.',
+    'For cancellation, rescheduling or refund-related questions, please contact Kiran Travels on WhatsApp. Applicable terms will be clarified before booking.',
+
+  generalQuestionsNotice:
+    'For any questions about fares, route availability, vehicle options, tolls, driver allowance, permits or cancellation, message Kiran Travels directly on WhatsApp.',
+};
+
+// Helper for exact client-specified route prefilled message
+export const getRouteWhatsAppUrl = (from: string, to: string, price: string) => {
+  const message = `Hello Kiran Travels, I want to enquire about a trip from ${from} to ${to}. The website shows an indicative fare of ${price}. Please confirm availability, the final fare and applicable charges.`;
+  return BUSINESS_INFO.whatsappUrl(message);
 };
 
 export const POPULAR_ROUTES: RouteFare[] = [
   {
-    id: 'srisailam',
-    from: 'Chilakaluripeta',
-    to: 'Srisailam',
-    price: '₹5,000',
-    priceNumeric: 5000,
-    distanceApprox: '~200 km (Scenic Ghat Road)',
-    popularFor: 'Sri Mallikarjuna Swamy Temple Pilgrimage',
-    highlights: ['Sacred Jyotirlinga Darshan', 'Comfortable Ghat Highway Drive', 'Flexible Temple Wait Time'],
-  },
-  {
-    id: 'hyderabad',
-    from: 'Chilakaluripeta',
-    to: 'Hyderabad',
-    price: '₹8,000',
-    priceNumeric: 8000,
-    distanceApprox: '~280 km (NH 65 Express Corridor)',
-    popularFor: 'Intercity Commute, Airport & Business Trips',
-    highlights: ['Fast Highway Transit', 'Airport Drop Available', 'Swift Dzire & Ertiga Available'],
-  },
-  {
-    id: 'chennai',
+    id: 'guntur-srisailam',
     from: 'Guntur',
-    to: 'Chennai',
-    price: '₹8,000',
-    priceNumeric: 8000,
-    distanceApprox: '~390 km (NH 16 Coastal Highway)',
-    popularFor: 'Long-Distance & Medical Travel',
-    highlights: ['Interstate Travel', 'Doorstep Pickup', 'Smooth Highway Ride'],
+    to: 'Srisailam',
+    price: '₹7,000',
+    priceNumeric: 7000,
+    distanceApprox: '~220 km (Scenic Ghat Road)',
+    popularFor: 'Sri Mallikarjuna Swamy Temple Pilgrimage',
+    highlights: ['Sacred Jyotirlinga Darshan', 'Ghat Highway Chauffeur', 'Temple Darshan Wait Time'],
   },
+  {
+    id: 'guntur-hyderabad',
+    from: 'Guntur',
+    to: 'Hyderabad',
+    price: '₹7,999',
+    priceNumeric: 7999,
+    distanceApprox: '~270 km (NH 65 Express Corridor)',
+    popularFor: 'Intercity Commute, Airport Drops & Metro Transit',
+    highlights: ['Fast Highway Transit', 'RGIA Airport Drop Available', 'Swift Dzire & Ertiga Available'],
+  },
+  {
+    id: 'chilakaluripeta-vijayawada',
+    from: 'Chilakaluripeta',
+    to: 'Vijayawada',
+    price: '₹2,999',
+    priceNumeric: 2999,
+    distanceApprox: '~85 km (NH 16 Highway Corridor)',
+    popularFor: 'Gannavaram Airport, Kanaka Durga Temple & City Commute',
+    highlights: ['Direct 4-Lane NH 16 Drive', 'Airport & Railway Station Drop', 'Doorstep Pickup'],
+  },
+  {
+    id: 'chilakaluripeta-guntur',
+    from: 'Chilakaluripeta',
+    to: 'Guntur',
+    price: '₹1,799',
+    priceNumeric: 1799,
+    distanceApprox: '~45 km (Smooth 4-Lane Highway)',
+    popularFor: 'Hospital & Medical Visits, Business & District Commute',
+    highlights: ['Quick 45-Minute Trip', 'Door-to-Door Service', 'Clean AC Car'],
+  },
+];
+
+export const SERVICE_AREAS = [
+  { name: 'Chilakaluripeta', slug: '/chilakaluripeta-car-rental', role: 'Registered Headquarters & Home Base' },
+  { name: 'Guntur', slug: '/car-rental-guntur', role: 'Primary Outstation Hub' },
+  { name: 'Vijayawada', slug: '/outstation-cabs-vijayawada', role: 'Commercial & Airport Corridor' },
+  { name: 'Tenali', slug: '/car-rental-guntur', role: 'Regional Service Area' },
+  { name: 'Narasaraopet', slug: '/chilakaluripeta-car-rental', role: 'Regional Service Area' },
+  { name: 'Sattenapalle', slug: '/car-rental-guntur', role: 'Regional Service Area' },
+  { name: 'Bapatla', slug: '/chilakaluripeta-car-rental', role: 'Coastal Service Area' },
+  { name: 'Ponnur', slug: '/car-rental-guntur', role: 'Regional Service Area' },
+  { name: 'Mangalagiri', slug: '/car-rental-guntur', role: 'Temple & Highway Corridor' },
+  { name: 'Amaravati', slug: '/outstation-cabs-vijayawada', role: 'Capital Region Service Area' },
 ];
 
 export const VEHICLE_FLEET: VehicleCategory[] = [
@@ -272,13 +304,13 @@ export const FAQ_LIST = [
   },
   {
     id: 'faq-3',
-    question: 'Are advertised route fares (like Srisailam ₹5,000 or Hyderabad ₹8,000) fixed or indicative?',
-    answer: 'All advertised route prices on our website are indicative starting estimates based on standard routes and vehicle availability. Actual final fares are confirmed directly by the owner based on your exact pickup/drop location, vehicle model (Swift Dzire vs. Ertiga), travel dates, waiting hours, and whether it is a one-way or round-trip booking.',
+    question: 'Are advertised route fares (like Guntur to Srisailam ₹7,000 or Hyderabad ₹7,999) fixed or indicative?',
+    answer: 'All advertised route prices on our website (Guntur to Srisailam ₹7,000, Guntur to Hyderabad ₹7,999, Chilakaluripeta to Vijayawada ₹2,999, and Chilakaluripeta to Guntur ₹1,799) are indicative starting quotations subject to confirmation by Kiran Travels. The exact final fare is confirmed directly through WhatsApp based on your exact pickup point, vehicle choice (Swift Dzire vs Ertiga), travel date, and journey type.',
   },
   {
     id: 'faq-4',
-    question: 'Are tolls, parking fees, interstate permits, and driver allowance included?',
-    answer: 'For round-trip arrangements, driver allowance and applicable stay-related permits or charges described by the owner are included in the quoted fare. Toll charges are separate and payable additionally at actuals. Inclusions for one-way trips are confirmed upfront. Please connect on WhatsApp to confirm the precise inclusions for your specific destination.',
+    question: 'Are tolls, driver allowance, and stay permits included in round-trip fares?',
+    answer: 'For confirmed round-trip arrangements, driver allowance and the applicable stay-related permit or charges specified by the owner are included in the relevant confirmed round-trip quotation. Highway toll charges are separate and payable additionally. Inclusions for one-way journeys are confirmed upfront. Contact Kiran Travels on WhatsApp for trip-specific clarification.',
   },
   {
     id: 'faq-5',
@@ -288,7 +320,7 @@ export const FAQ_LIST = [
   {
     id: 'faq-6',
     question: 'What is the cancellation and rescheduling policy?',
-    answer: 'For cancellation, rescheduling and refund-related queries, please contact Kiran Travels directly on WhatsApp. Applicable terms will be communicated and confirmed before booking.',
+    answer: 'For cancellation, rescheduling or refund-related questions, please contact Kiran Travels on WhatsApp. Applicable terms will be clarified before booking.',
   },
   {
     id: 'faq-7',

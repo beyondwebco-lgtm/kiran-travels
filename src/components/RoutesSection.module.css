@@ -7,7 +7,7 @@
 
 @media (min-width: 768px) {
   .routesGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -43,7 +43,7 @@
 }
 
 .routeHeader {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .fromToBadge {
@@ -51,19 +51,20 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 800;
   color: var(--color-white);
   margin-bottom: 6px;
 }
 
 .pinIcon {
   color: var(--color-gold-400);
+  flex-shrink: 0;
 }
 
 .arrowIcon {
   color: var(--color-gold-400);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .toDestination {
@@ -71,7 +72,7 @@
 }
 
 .approxDistance {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--color-slate-400);
   font-weight: 500;
 }
@@ -82,7 +83,7 @@
   border-radius: var(--radius-md);
   padding: 16px 14px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .priceLead {
@@ -124,14 +125,14 @@
 
 .priceType {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--color-slate-400);
   margin-top: 4px;
 }
 
 .routeMeta {
   flex-grow: 1;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .popularForTitle {
@@ -140,11 +141,11 @@
   color: var(--color-slate-300);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .popularForText {
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   color: var(--color-slate-200);
   margin-bottom: 12px;
   line-height: 1.4;
@@ -155,23 +156,45 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-bottom: 14px;
 }
 
 .highlightItem {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.8rem;
-  color: var(--color-slate-400);
+  font-size: 0.82rem;
+  color: var(--color-slate-300);
 }
 
-.checkDot {
+.checkIcon {
   color: var(--color-gold-400);
-  font-weight: 800;
+  flex-shrink: 0;
 }
 
-.cardAction {
-  padding-top: 10px;
+.routeClarification {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  font-size: 0.72rem;
+  color: var(--color-slate-400);
+  line-height: 1.4;
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.bookRouteBtn,
+.checkFareBtn {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.88rem;
+  padding: 11px 16px;
 }
 
 /* Offer Banner */
@@ -219,10 +242,20 @@
   font-size: 0.92rem;
   color: var(--color-slate-300);
   line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.bannerPricingRules {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--color-gold-400);
+  line-height: 1.45;
 }
 
 .bannerRight {
-  shrink: 0;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -235,45 +268,89 @@
   }
 }
 
-/* Disclaimer */
+/* Disclaimer & Trip Charges Box */
 .disclaimerBox {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 16px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-md);
-  padding: 16px 18px;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+@media (max-width: 640px) {
+  .disclaimerBox {
+    padding: 16px;
+    gap: 12px;
+  }
 }
 
 .disclaimerContent {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
+  width: 100%;
+}
+
+.disclaimerHeading {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -0.01em;
 }
 
 .infoIcon {
   color: var(--color-gold-400);
-  shrink: 0;
-  margin-top: 2px;
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 
-.disclaimerText {
-  font-size: 0.8rem;
-  color: var(--color-slate-400);
-  line-height: 1.6;
+.termsColumns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
 
-.disclaimerText strong {
-  color: var(--color-slate-200);
+@media (min-width: 640px) {
+  .termsColumns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.termCol {
+  background: rgba(8, 13, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  font-size: 0.82rem;
+  color: var(--color-slate-300);
+  line-height: 1.5;
+}
+
+.termCol strong {
+  display: block;
+  color: var(--color-gold-400);
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.policyNotesGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .mandatoryNoteText {
   font-size: 0.82rem;
-  color: var(--color-gold-400);
+  color: var(--color-slate-300);
   line-height: 1.5;
   background: rgba(247, 185, 40, 0.06);
-  border-left: 2px solid var(--color-gold-400);
-  padding: 6px 10px;
-  border-radius: 0 4px 4px 0;
+  border-left: 3px solid var(--color-gold-400);
+  padding: 8px 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.mandatoryNoteText strong {
+  color: var(--color-gold-400);
 }

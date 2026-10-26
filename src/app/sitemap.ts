@@ -6,5 +6,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${SITE_URL}`,
     },
+    {
+      url: `${SITE_URL}/car-rental-guntur`,
+    },
+    {
+      url: `${SITE_URL}/chilakaluripeta-car-rental`,
+    },
+    {
+      url: `${SITE_URL}/outstation-cabs-vijayawada`,
+    },
   ];
 }

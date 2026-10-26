@@ -124,18 +124,23 @@ export default function Hero() {
               {/* Quick Route Teasers at bottom of visual */}
               <div className={styles.quickRoutesTeaser}>
                 <div className={styles.quickRouteItem}>
-                  <span className={styles.routeCity}>Srisailam</span>
-                  <span className={styles.routeFare}>From ₹5,000*</span>
+                  <span className={styles.routeCity}>Guntur ➔ Srisailam</span>
+                  <span className={styles.routeFare}>₹7,000*</span>
                 </div>
                 <div className={styles.quickRouteDivider}></div>
                 <div className={styles.quickRouteItem}>
-                  <span className={styles.routeCity}>Hyderabad</span>
-                  <span className={styles.routeFare}>From ₹8,000*</span>
+                  <span className={styles.routeCity}>Guntur ➔ Hyderabad</span>
+                  <span className={styles.routeFare}>₹7,999*</span>
                 </div>
                 <div className={styles.quickRouteDivider}></div>
                 <div className={styles.quickRouteItem}>
-                  <span className={styles.routeCity}>Chennai</span>
-                  <span className={styles.routeFare}>From ₹8,000*</span>
+                  <span className={styles.routeCity}>Chilakaluripeta ➔ Vijayawada</span>
+                  <span className={styles.routeFare}>₹2,999*</span>
+                </div>
+                <div className={styles.quickRouteDivider}></div>
+                <div className={styles.quickRouteItem}>
+                  <span className={styles.routeCity}>Chilakaluripeta ➔ Guntur</span>
+                  <span className={styles.routeFare}>₹1,799*</span>
                 </div>
               </div>
             </div>

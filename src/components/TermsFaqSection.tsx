@@ -142,7 +142,7 @@ export default function TermsFaqSection() {
                   2.1 The advertised rate of ₹13 per kilometre applies to one-way trips, including eligible destinations across India, subject to route confirmation with Kiran Travels.
                 </p>
                 <p>
-                  2.2 Fixed route estimates (e.g., Chilakaluripeta to Srisailam: ₹5,000; Chilakaluripeta to Hyderabad: ₹8,000; Guntur to Chennai: ₹8,000) are indicative starting figures subject to confirmation, vehicle choice (Swift Dzire vs. Ertiga), and travel dates.
+                  2.2 Indicative route estimates (e.g., Guntur to Srisailam: ₹7,000; Guntur to Hyderabad: ₹7,999; Chilakaluripeta to Vijayawada: ₹2,999; Chilakaluripeta to Guntur: ₹1,799) are indicative starting figures subject to confirmation, vehicle choice (Swift Dzire vs. Ertiga), and travel dates.
                 </p>
                 <p>
                   2.3 Customers can contact Kiran Travels on WhatsApp to clarify route details, exact fare calculations, or any specific trip inquiries.
@@ -178,7 +178,7 @@ export default function TermsFaqSection() {
               <div className={styles.policySection}>
                 <h4>5. Rescheduling, Cancellations &amp; Refunds</h4>
                 <p>
-                  5.1 For cancellation, rescheduling and refund-related queries, please contact Kiran Travels directly on WhatsApp. Applicable terms will be communicated and confirmed before booking.
+                  5.1 For cancellation, rescheduling or refund-related questions, please contact Kiran Travels on WhatsApp. Applicable terms will be clarified before booking.
                 </p>
               </div>
 

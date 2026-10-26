@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Phone, MessageCircle, Menu, X } from 'lucide-react';
 import { BUSINESS_INFO } from '@/data/travelData';
 import styles from './Navbar.module.css';
@@ -32,7 +33,7 @@ export default function Navbar() {
         <div className="container">
           <div className={styles.navRow}>
             {/* Official Brand Logo */}
-            <a href="#home" className={styles.logoLink} onClick={closeMenu} aria-label="Kiran Travels - Home">
+            <Link href="/" className={styles.logoLink} onClick={closeMenu} aria-label="Kiran Travels - Home">
               <Image
                 src="/images/logo.png"
                 alt="Kiran Travels Chilakaluripeta Logo"
@@ -41,17 +42,19 @@ export default function Navbar() {
                 priority
                 className={styles.brandLogoImg}
               />
-            </a>
+            </Link>
 
             {/* Desktop Navigation Links — Streamlined & Elegant */}
             <nav className={styles.desktopNav} aria-label="Main Navigation">
-              <a href="#home" className={styles.navLink}>Home</a>
-              <a href="#services" className={styles.navLink}>Services</a>
-              <a href="#routes" className={styles.navLink}>Routes &amp; Fares</a>
-              <a href="#fleet" className={styles.navLink}>Our Fleet</a>
-              <a href="#about" className={styles.navLink}>About</a>
-              <a href="#faq" className={styles.navLink}>FAQs</a>
-              <a href="#contact" className={styles.navLink}>Contact</a>
+              <Link href="/" className={styles.navLink}>Home</Link>
+              <a href="/#services" className={styles.navLink}>Services</a>
+              <a href="/#routes" className={styles.navLink}>Routes &amp; Fares</a>
+              <a href="/#fleet" className={styles.navLink}>Fleet</a>
+              <Link href="/car-rental-guntur" className={styles.navLink}>Guntur</Link>
+              <Link href="/outstation-cabs-vijayawada" className={styles.navLink}>Vijayawada</Link>
+              <a href="/#about" className={styles.navLink}>About</a>
+              <a href="/#faq" className={styles.navLink}>FAQs</a>
+              <a href="/#contact" className={styles.navLink}>Contact</a>
             </nav>
 
             {/* Desktop Actions */}
@@ -137,31 +140,37 @@ export default function Navbar() {
           </div>
 
           <nav className={styles.mobileNavLinks}>
-            <a href="#home" className={styles.mobileLink} onClick={closeMenu}>
+            <Link href="/" className={styles.mobileLink} onClick={closeMenu}>
               Home
-            </a>
-            <a href="#booking-form" className={styles.mobileLink} onClick={closeMenu}>
+            </Link>
+            <Link href="/chilakaluripeta-car-rental" className={styles.mobileLink} onClick={closeMenu}>
+              Chilakaluripeta (Home Base)
+            </Link>
+            <Link href="/car-rental-guntur" className={styles.mobileLink} onClick={closeMenu}>
+              Car Rental in Guntur
+            </Link>
+            <Link href="/outstation-cabs-vijayawada" className={styles.mobileLink} onClick={closeMenu}>
+              Vijayawada Outstation Cabs
+            </Link>
+            <a href="/#booking-form" className={styles.mobileLink} onClick={closeMenu}>
               Quick Fare Estimate
             </a>
-            <a href="#services" className={styles.mobileLink} onClick={closeMenu}>
+            <a href="/#services" className={styles.mobileLink} onClick={closeMenu}>
               Our Services
             </a>
-            <a href="#routes" className={styles.mobileLink} onClick={closeMenu}>
+            <a href="/#routes" className={styles.mobileLink} onClick={closeMenu}>
               Popular Routes &amp; Fares
             </a>
-            <a href="#fleet" className={styles.mobileLink} onClick={closeMenu}>
+            <a href="/#fleet" className={styles.mobileLink} onClick={closeMenu}>
               Our Fleet (Dzire &amp; Ertiga)
             </a>
-            <a href="#why-us" className={styles.mobileLink} onClick={closeMenu}>
-              Why Travel With Us
-            </a>
-            <a href="#about" className={styles.mobileLink} onClick={closeMenu}>
+            <a href="/#about" className={styles.mobileLink} onClick={closeMenu}>
               About Kiran Travels
             </a>
-            <a href="#faq" className={styles.mobileLink} onClick={closeMenu}>
+            <a href="/#faq" className={styles.mobileLink} onClick={closeMenu}>
               Policies &amp; FAQs
             </a>
-            <a href="#contact" className={styles.mobileLink} onClick={closeMenu}>
+            <a href="/#contact" className={styles.mobileLink} onClick={closeMenu}>
               Contact &amp; Location
             </a>
           </nav>
