@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 /* ==========================================================================
    KIRAN TRAVELS — DESIGN SYSTEM & GLOBAL STYLES
    Visual Identity: Deep Midnight Navy, Refined Gold, Crisp Typography
    ========================================================================== */
 
 :root {
+  /* Typography Families */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+
   /* Midnight Navy Color Scale */
   --color-navy-950: #050811;
   --color-navy-900: #080D1A;

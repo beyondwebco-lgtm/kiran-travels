@@ -1,24 +1,9 @@
 import type { Metadata, Viewport } from 'next';
-import { Plus_Jakarta_Sans, Outfit } from 'next/font/google';
 import '@/styles/globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import StickyMobileBar from '@/components/StickyMobileBar';
 import { SITE_URL } from '@/data/travelData';
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-sans',
-  display: 'swap',
-});
-
-const outfit = Outfit({
-  subsets: ['latin'],
-  weight: ['600', '700', '800', '900'],
-  variable: '--font-display',
-  display: 'swap',
-});
 
 export const viewport: Viewport = {
   themeColor: '#050811',
@@ -132,8 +117,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${jakarta.variable} ${outfit.variable}`}>
+    <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
