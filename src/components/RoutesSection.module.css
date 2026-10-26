@@ -1,0 +1,279 @@
+.routesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .routesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.routeCard {
+  background: linear-gradient(180deg, #0F172B 0%, #0A0F1D 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.routeCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-400), transparent);
+  opacity: 0.6;
+}
+
+.routeCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-gold);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.routeHeader {
+  margin-bottom: 20px;
+}
+
+.fromToBadge {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 6px;
+}
+
+.pinIcon {
+  color: var(--color-gold-400);
+}
+
+.arrowIcon {
+  color: var(--color-gold-400);
+  font-size: 0.85rem;
+}
+
+.toDestination {
+  color: var(--color-gold-400);
+}
+
+.approxDistance {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  font-weight: 500;
+}
+
+.routePricingBox {
+  background: rgba(247, 185, 40, 0.06);
+  border: 1px dashed var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 16px 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.priceLead {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-slate-300);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1;
+}
+
+.currencySymbol {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-gold-400);
+  margin-top: 4px;
+}
+
+.priceAmount {
+  font-size: 2.35rem;
+  font-weight: 900;
+  color: var(--color-gold-400);
+  letter-spacing: -0.02em;
+}
+
+.priceAsterisk {
+  font-size: 1.2rem;
+  color: var(--color-slate-400);
+  margin-left: 2px;
+}
+
+.priceType {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-slate-400);
+  margin-top: 4px;
+}
+
+.routeMeta {
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+
+.popularForTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-slate-300);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.popularForText {
+  font-size: 0.85rem;
+  color: var(--color-slate-200);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.highlightsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--color-slate-400);
+}
+
+.checkDot {
+  color: var(--color-gold-400);
+  font-weight: 800;
+}
+
+.cardAction {
+  padding-top: 10px;
+}
+
+/* Offer Banner */
+.offerBanner {
+  background: linear-gradient(135deg, #132244 0%, #0D162B 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .offerBanner {
+    padding: 24px 20px;
+  }
+}
+
+.bannerLeft {
+  max-width: 680px;
+}
+
+.bannerTag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-400);
+  margin-bottom: 6px;
+}
+
+.bannerHeading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.bannerSub {
+  font-size: 0.92rem;
+  color: var(--color-slate-300);
+  line-height: 1.5;
+}
+
+.bannerRight {
+  shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .bannerRight {
+    width: 100%;
+  }
+  .bannerRight .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Disclaimer */
+.disclaimerBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+}
+
+.disclaimerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.infoIcon {
+  color: var(--color-gold-400);
+  shrink: 0;
+  margin-top: 2px;
+}
+
+.disclaimerText {
+  font-size: 0.8rem;
+  color: var(--color-slate-400);
+  line-height: 1.6;
+}
+
+.disclaimerText strong {
+  color: var(--color-slate-200);
+}
+
+.mandatoryNoteText {
+  font-size: 0.82rem;
+  color: var(--color-gold-400);
+  line-height: 1.5;
+  background: rgba(247, 185, 40, 0.06);
+  border-left: 2px solid var(--color-gold-400);
+  padding: 6px 10px;
+  border-radius: 0 4px 4px 0;
+}

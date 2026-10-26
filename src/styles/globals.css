@@ -1,0 +1,339 @@
+/* ==========================================================================
+   KIRAN TRAVELS — DESIGN SYSTEM & GLOBAL STYLES
+   Visual Identity: Deep Midnight Navy, Refined Gold, Crisp Typography
+   ========================================================================== */
+
+:root {
+  /* Midnight Navy Color Scale */
+  --color-navy-950: #050811;
+  --color-navy-900: #080D1A;
+  --color-navy-850: #0C1326;
+  --color-navy-800: #101B34;
+  --color-navy-750: #152242;
+  --color-navy-700: #1B2B52;
+  --color-navy-600: #253A6E;
+
+  /* Golden Accent Scale */
+  --color-gold-400: #FACC15;
+  --color-gold-500: #F7B928;
+  --color-gold-600: #E09F17;
+  --color-gold-700: #B87D09;
+  --color-gold-glow: rgba(247, 185, 40, 0.22);
+  --color-gold-subtle: rgba(247, 185, 40, 0.08);
+
+  /* Neutrals & Text */
+  --color-white: #FFFFFF;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-700: #334155;
+
+  /* Conversion & Status Colors */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #22BF5B;
+  --color-whatsapp-dark: #128C7E;
+  --color-success: #10B981;
+  --color-error: #EF4444;
+
+  /* Surfaces & Glass */
+  --surface-card: #0D1528;
+  --surface-card-hover: #121C35;
+  --surface-elevated: #15213F;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(247, 185, 40, 0.35);
+  --border-gold-strong: rgba(247, 185, 40, 0.7);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 8px 28px rgba(247, 185, 40, 0.25);
+  --shadow-whatsapp: 0 8px 24px rgba(37, 211, 102, 0.3);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-max: 1200px;
+  --header-height: 66px;
+}
+
+/* Base Reset & Typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-navy-950);
+  color: var(--color-slate-100);
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 0%, #101c38 0%, #070c18 60%, #04070d 100%);
+  color: var(--color-slate-200);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .section-title {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  touch-action: manipulation;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 16px;
+  max-width: 100%;
+  touch-action: manipulation;
+}
+
+/* Accessibility Focus States */
+:focus-visible {
+  outline: 2px solid var(--color-gold-400);
+  outline-offset: 3px;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.section {
+  padding-top: clamp(48px, 6vw, 84px);
+  padding-bottom: clamp(48px, 6vw, 84px);
+  position: relative;
+}
+
+/* Section Header Component */
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: clamp(32px, 5vw, 48px);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-gold-500);
+  font-size: clamp(0.72rem, 2vw, 0.8rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding: 5px 12px;
+  background: var(--color-gold-subtle);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+}
+
+.section-title {
+  font-size: clamp(1.65rem, 4.5vw, 2.65rem);
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-slate-400);
+  line-height: 1.6;
+}
+
+/* Gold Accent Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FDE68A 0%, #F7B928 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Common Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 13px 26px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-500) 50%, var(--color-gold-600) 100%);
+  color: #0B111F;
+  box-shadow: 0 4px 18px rgba(247, 185, 40, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #FFE066 0%, #F7B928 60%, #E09F17 100%);
+  box-shadow: 0 6px 24px rgba(247, 185, 40, 0.5);
+  transform: translateY(-2px);
+  color: #000000;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #1EBE5D 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-whatsapp);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #2CE26F 0%, #22BF5B 100%);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--color-gold-400);
+  border: 1.5px solid var(--border-gold-strong);
+}
+
+.btn-outline-gold:hover {
+  background: var(--color-gold-subtle);
+  border-color: var(--color-gold-400);
+  color: #FFF;
+  transform: translateY(-2px);
+}
+
+/* Card Styling */
+.card-base {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.card-base:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Decorative Divider */
+.gold-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-500), transparent);
+  margin: 16px auto;
+  border-radius: var(--radius-full);
+}
+
+/* Floating WhatsApp badge animation */
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
+  }
+}
+
+.pulse-badge {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-navy-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy-700);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-600);
+}

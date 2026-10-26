@@ -1,0 +1,124 @@
+.reviewContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+@media (min-width: 900px) {
+  .reviewContainer {
+    grid-template-columns: 1.35fr 1fr;
+  }
+}
+
+.reassuranceCard {
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reassuranceHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.shieldIconWrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(247, 185, 40, 0.08);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-400);
+  shrink: 0;
+}
+
+.cardHeading {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.cardSub {
+  font-size: 0.75rem;
+  color: var(--color-gold-400);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardBody {
+  font-size: 0.92rem;
+  color: var(--color-slate-300);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.commitmentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.commitItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--color-slate-300);
+}
+
+.commitIcon {
+  color: var(--color-gold-400);
+  shrink: 0;
+}
+
+/* Invite Card */
+.inviteCard {
+  background: linear-gradient(135deg, #111D3A 0%, #0B1326 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.inviteStarRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.goldStar {
+  fill: var(--color-gold-400);
+  color: var(--color-gold-400);
+}
+
+.inviteTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+.inviteText {
+  font-size: 0.88rem;
+  color: var(--color-slate-300);
+  line-height: 1.55;
+  margin-bottom: 24px;
+}

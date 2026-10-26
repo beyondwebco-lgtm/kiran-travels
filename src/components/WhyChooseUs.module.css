@@ -1,0 +1,149 @@
+.trustGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+  .trustGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .trustGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.trustCard {
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.trustCard:hover {
+  background: var(--surface-card-hover);
+  border-color: var(--border-gold);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  background: rgba(247, 185, 40, 0.08);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-400);
+  transition: all var(--transition-fast);
+}
+
+.trustCard:hover .iconBox {
+  background: var(--color-gold-400);
+  color: #0B111F;
+  transform: rotate(5deg) scale(1.08);
+}
+
+.cardNumber {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.15);
+  letter-spacing: -0.02em;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+.cardDesc {
+  font-size: 0.88rem;
+  color: var(--color-slate-400);
+  line-height: 1.6;
+}
+
+/* Metric Bar */
+.metricBar {
+  background: linear-gradient(135deg, #101B35 0%, #080D1A 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.metricValue {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--color-gold-400);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.metricValue small {
+  font-size: 1.2rem;
+}
+
+.metricLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-slate-300);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.metricDivider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 640px) {
+  .metricDivider {
+    display: none;
+  }
+  .metricItem {
+    width: 45%;
+  }
+}
+
+@media (max-width: 420px) {
+  .metricBar {
+    padding: 24px 16px;
+    gap: 16px;
+  }
+  .metricItem {
+    width: 100%;
+  }
+}

@@ -1,0 +1,166 @@
+/* Floating Desktop / Tablet Widget */
+.floatingWidgetGroup {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .floatingWidgetGroup {
+    bottom: 84px; /* avoid colliding with mobile sticky bar */
+    right: 16px;
+    display: none; /* Mobile sticky bar replaces floating button on small screens */
+  }
+}
+
+.scrollTopBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(13, 21, 40, 0.9);
+  border: 1px solid var(--border-gold);
+  color: var(--color-gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: all var(--transition-fast);
+}
+
+.scrollTopBtn:hover {
+  background: var(--color-gold-400);
+  color: #080D1A;
+  transform: translateY(-2px);
+}
+
+.floatingWhatsAppBtn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #1EB858 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.floatingWhatsAppBtn:hover {
+  transform: scale(1.08);
+}
+
+.floatingTooltip {
+  position: absolute;
+  right: 70px;
+  background: #080D1A;
+  color: #FFFFFF;
+  border: 1px solid var(--border-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(8px);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.floatingWhatsAppBtn:hover .floatingTooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile Sticky Bottom Bar */
+.mobileStickyBar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(8, 13, 26, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-gold);
+  padding: 10px 16px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  z-index: 150;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .mobileStickyBar {
+    display: block;
+  }
+}
+
+.mobileBarInner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.mobileCallBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: var(--radius-full);
+  text-align: center;
+}
+
+.mobileCallBtn:active {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.mobileWhatsAppBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #25D366 0%, #1EB858 100%);
+  color: #FFFFFF;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: var(--radius-full);
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.mobileWhatsAppBtn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 360px) {
+  .mobileStickyBar {
+    padding: 8px 10px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  }
+  .mobileBarInner {
+    gap: 6px;
+    grid-template-columns: 1fr 1.3fr;
+  }
+  .mobileCallBtn,
+  .mobileWhatsAppBtn {
+    padding: 10px 6px;
+    font-size: 0.8rem;
+    gap: 5px;
+  }
+}

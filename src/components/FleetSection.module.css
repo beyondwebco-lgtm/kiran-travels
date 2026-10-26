@@ -1,0 +1,233 @@
+.fleetGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .fleetGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.fleetCard {
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-normal);
+}
+
+.fleetCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-gold);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.imageContainer {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #060A14;
+}
+
+.carImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s ease;
+}
+
+.fleetCard:hover .carImage {
+  transform: scale(1.05);
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(8, 13, 26, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.startingRateBadge {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-600) 100%);
+  color: #0A0F1D;
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.cardContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.carName {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.carTagline {
+  font-size: 0.84rem;
+  color: var(--color-slate-400);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Specs Grid */
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 12px 10px;
+  margin-bottom: 18px;
+}
+
+.specBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.specIcon {
+  color: var(--color-gold-400);
+  margin-bottom: 4px;
+}
+
+.specLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-slate-400);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.specValue {
+  font-size: 0.76rem;
+  color: var(--color-white);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.bestForSection {
+  margin-bottom: 14px;
+}
+
+.bestForLabel {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-slate-400);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.bestForText {
+  font-size: 0.84rem;
+  color: var(--color-slate-200);
+  line-height: 1.4;
+}
+
+.verificationNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(247, 185, 40, 0.06);
+  border: 1px solid rgba(247, 185, 40, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  font-size: 0.72rem;
+  color: var(--color-slate-300);
+  margin-bottom: 20px;
+}
+
+.verifyIcon {
+  color: var(--color-gold-400);
+  shrink: 0;
+}
+
+.cardAction {
+  margin-top: auto;
+}
+
+/* Guide Banner */
+.guideBanner {
+  background: linear-gradient(135deg, #101B34 0%, #0A0F1F 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .guideBanner {
+    padding: 20px 16px;
+  }
+}
+
+.guideLeft {
+  max-width: 640px;
+}
+
+.guideHeading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 6px;
+}
+
+.guideDesc {
+  font-size: 0.88rem;
+  color: var(--color-slate-300);
+  line-height: 1.5;
+}
+
+.guideRight {
+  shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .guideRight {
+    width: 100%;
+  }
+  .guideRight .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

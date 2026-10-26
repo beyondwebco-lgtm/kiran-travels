@@ -1,0 +1,337 @@
+/* ==========================================================================
+   KIRAN TRAVELS — CLEAN & NEAT NAVBAR
+   ========================================================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 66px;
+  z-index: 100;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(6, 10, 22, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.scrolled {
+  background: rgba(5, 8, 17, 0.96);
+  border-bottom-color: rgba(247, 185, 40, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+}
+
+/* Brand Logo */
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.brandLogoImg {
+  height: 42px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+.logoLink:hover .brandLogoImg {
+  transform: scale(1.04);
+  filter: drop-shadow(0 4px 12px rgba(247, 185, 40, 0.25));
+}
+
+@media (max-width: 480px) {
+  .brandLogoImg {
+    height: 36px;
+    max-width: 115px;
+  }
+}
+
+@media (max-width: 340px) {
+  .brandLogoImg {
+    height: 32px;
+    max-width: 100px;
+  }
+}
+
+.drawerLogoImg {
+  height: 42px;
+  width: auto;
+  max-width: 145px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+/* Desktop Links */
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 22px;
+}
+
+@media (min-width: 1040px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #CBD5E1;
+  text-decoration: none;
+  padding: 6px 4px;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--color-gold-400);
+}
+
+/* Desktop Actions */
+.desktopActions {
+  display: none;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1040px) {
+  .desktopActions {
+    display: flex;
+  }
+}
+
+.callLink {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.callLink:hover {
+  background: rgba(247, 185, 40, 0.08);
+  border-color: rgba(247, 185, 40, 0.4);
+}
+
+.phoneIconCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(247, 185, 40, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-400);
+}
+
+.phoneText {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-slate-200);
+  letter-spacing: 0.01em;
+}
+
+.callLink:hover .phoneText {
+  color: var(--color-white);
+}
+
+.bookBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #FACC15 0%, #F59E0B 100%);
+  color: #080D1A;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(247, 185, 40, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.bookBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(247, 185, 40, 0.5);
+  background: linear-gradient(135deg, #FDE047 0%, #F59E0B 100%);
+}
+
+.bookBtn:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Controls */
+.mobileControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 1040px) {
+  .mobileControls {
+    display: none;
+  }
+}
+
+.mobileCallIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-400);
+  text-decoration: none;
+}
+
+.menuToggle {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+/* Mobile Drawer Overlay */
+.mobileDrawerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.mobileDrawerOverlay.drawerOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileDrawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 82%;
+  max-width: 320px;
+  background: #080D1A;
+  border-left: 1px solid rgba(247, 185, 40, 0.25);
+  display: flex;
+  flex-direction: column;
+  padding: 22px 18px;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+}
+
+.drawerOpen .mobileDrawer {
+  transform: translateX(0);
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.drawerCloseBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-slate-300);
+  border: none;
+  cursor: pointer;
+}
+
+.rateHighlightBanner {
+  margin: 14px 0;
+  padding: 8px 12px;
+  background: rgba(247, 185, 40, 0.08);
+  border: 1px dashed rgba(247, 185, 40, 0.35);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rateBadge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--color-gold-400);
+}
+
+.rateText {
+  font-size: 0.8rem;
+  color: var(--color-white);
+}
+
+.rateText strong {
+  color: var(--color-gold-400);
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+  flex-grow: 1;
+}
+
+.mobileLink {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-slate-200);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.mobileLink:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-gold-400);
+  padding-left: 16px;
+}
+
+.drawerActions {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 16px;
+}

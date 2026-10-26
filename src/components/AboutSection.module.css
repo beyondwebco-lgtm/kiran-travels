@@ -1,0 +1,250 @@
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .aboutGrid {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 64px;
+  }
+}
+
+.visualCol {
+  position: relative;
+}
+
+.imageStack {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.primaryImgWrapper {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  aspect-ratio: 4 / 3;
+}
+
+.aboutImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.posterPreviewCard {
+  position: absolute;
+  bottom: -24px;
+  right: -16px;
+  width: 170px;
+  background: #0A1020;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .posterPreviewCard {
+    display: block;
+  }
+}
+
+.posterBadge {
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-400);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.posterThumb {
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 9 / 13;
+}
+
+.posterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.posterCaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: var(--color-slate-300);
+  margin-top: 6px;
+}
+
+.posterCaption strong {
+  color: var(--color-gold-400);
+}
+
+.experienceTag {
+  position: absolute;
+  top: 20px;
+  left: -16px;
+  background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-600) 100%);
+  color: #0A0F1D;
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 640px) {
+  .experienceTag {
+    left: 8px;
+    top: 8px;
+  }
+}
+
+.expNumber {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.expText {
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  max-width: 120px;
+}
+
+/* Narrative Column */
+.narrativeCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutHeading {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+}
+
+@media (min-width: 768px) {
+  .aboutHeading {
+    font-size: 2.5rem;
+  }
+}
+
+.leadParagraph {
+  font-size: 1.05rem;
+  color: var(--color-slate-200);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.bodyParagraph {
+  font-size: 0.92rem;
+  color: var(--color-slate-400);
+  line-height: 1.65;
+  margin-bottom: 26px;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 640px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.valueItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.valueIcon {
+  color: var(--color-gold-400);
+  shrink: 0;
+  margin-top: 2px;
+}
+
+.valueItem strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.valueItem span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-slate-400);
+  line-height: 1.4;
+}
+
+/* Direct Contact Box */
+.directContactBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(247, 185, 40, 0.08) 0%, rgba(26, 40, 74, 0.4) 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.directLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-slate-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.phoneLink {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-gold-400);
+  letter-spacing: 0.02em;
+}
+
+.phoneLink:hover {
+  color: var(--color-white);
+}
+
+@media (max-width: 640px) {
+  .directContactBox {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .directContactBox .btn {
+    justify-content: center;
+  }
+}

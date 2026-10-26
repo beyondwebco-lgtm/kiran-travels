@@ -1,0 +1,277 @@
+.footer {
+  background: #04070F;
+  border-top: 1px solid rgba(247, 185, 40, 0.2);
+  padding-top: 64px;
+  padding-bottom: 96px; /* space for mobile sticky bar */
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-bottom: 40px;
+  }
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1.4fr 0.8fr 1fr 1.1fr;
+    gap: 48px;
+  }
+}
+
+/* Brand Col */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.footerLogoImg {
+  height: 48px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.5));
+}
+
+.brandTagline {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-gold-400);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.brandDescription {
+  font-size: 0.85rem;
+  color: var(--color-slate-400);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.brandTrustBadges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.trustPill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-gold-400);
+  background: rgba(247, 185, 40, 0.08);
+  border: 1px solid rgba(247, 185, 40, 0.25);
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+}
+
+/* Links Col */
+.linksCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.colTitle {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.colTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: var(--color-gold-400);
+  border-radius: 2px;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLink {
+  font-size: 0.85rem;
+  color: var(--color-slate-400);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerLink:hover {
+  color: var(--color-gold-400);
+  transform: translateX(3px);
+}
+
+.routeFarePill {
+  font-size: 0.72rem;
+  color: var(--color-gold-400);
+  background: rgba(247, 185, 40, 0.08);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+/* Contact Col */
+.contactCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--color-slate-300);
+  line-height: 1.45;
+}
+
+.contactIcon {
+  color: var(--color-gold-400);
+  shrink: 0;
+  margin-top: 2px;
+}
+
+.contactLink {
+  color: var(--color-slate-200);
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.contactLink:hover {
+  color: var(--color-gold-400);
+}
+
+.footerCtaBox {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 12px;
+}
+
+.footerCtaTitle {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-slate-400);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: var(--color-slate-500);
+}
+
+.copyrightText strong {
+  color: var(--color-slate-300);
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.policyLink,
+.policyButton {
+  font-size: 0.8rem;
+  color: var(--color-slate-400);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.policyLink:hover,
+.policyButton:hover {
+  color: var(--color-gold-400);
+}
+
+.dotSeparator {
+  color: var(--color-slate-600);
+}
+
+/* Privacy Modal */
+.privacyOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.privacyModal {
+  background: #0B1120;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  max-width: 540px;
+  width: 100%;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.privacyTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.privacyText {
+  font-size: 0.86rem;
+  color: var(--color-slate-300);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}

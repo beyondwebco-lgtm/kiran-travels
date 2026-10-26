@@ -1,0 +1,410 @@
+.heroSection {
+  position: relative;
+  padding-top: calc(var(--header-height) + 36px);
+  padding-bottom: 56px;
+  overflow: hidden;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding-top: calc(var(--header-height) + 20px);
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+}
+
+.ambientGlowTop {
+  position: absolute;
+  top: -120px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(247, 185, 40, 0.12) 0%, rgba(247, 185, 40, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambientGlowBottom {
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(27, 43, 82, 0.45) 0%, rgba(5, 8, 17, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrowBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-gold-400);
+  background: rgba(247, 185, 40, 0.08);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  width: fit-content;
+  margin-bottom: 18px;
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-gold-400);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-gold-400);
+  animation: pulseSubtle 2s infinite ease-in-out;
+}
+
+.heroTitle {
+  font-size: clamp(1.95rem, 5.5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--color-white);
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+
+.heroSubtitle {
+  font-size: clamp(0.92rem, 2vw, 1.05rem);
+  color: var(--color-slate-300);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 580px;
+}
+
+@media (max-width: 640px) {
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* Fare Offer Card */
+.fareOfferCard {
+  background: linear-gradient(135deg, rgba(26, 40, 74, 0.7) 0%, rgba(13, 21, 40, 0.9) 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-bottom: 26px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.offerBadge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-400);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.fareRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fareLabel {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-slate-200);
+}
+
+.farePrice {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-gold-400);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.perKm {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-slate-300);
+}
+
+.taglineSub {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-slate-400);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* CTA Group */
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 640px) {
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mainCta, .whatsappCta, .serviceCta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.trustBar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--color-slate-300);
+}
+
+.trustIcon {
+  color: var(--color-gold-400);
+  shrink: 0;
+}
+
+.trustDivider {
+  width: 4px;
+  height: 4px;
+  background: var(--color-slate-500);
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+  .trustDivider {
+    display: none;
+  }
+  .trustBar {
+    gap: 10px;
+  }
+  .trustItem {
+    width: 100%;
+  }
+}
+
+/* Visual Column */
+.heroVisualWrapper {
+  width: 100%;
+}
+
+.imageCard {
+  background: var(--surface-card);
+  border: 1px solid rgba(247, 185, 40, 0.25);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+  transition: transform var(--transition-normal);
+}
+
+.imageInner {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #060A14;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+
+.imageCard:hover .heroImage {
+  transform: scale(1.03);
+}
+
+.imageOverlayGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 13, 26, 0.1) 0%,
+    rgba(8, 13, 26, 0.4) 60%,
+    rgba(8, 13, 26, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+/* Floating Elements */
+.floatingVehicleBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(8, 13, 26, 0.82);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.vehicleBadgeIcon {
+  width: 28px;
+  height: 28px;
+  background: var(--color-gold-subtle);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-400);
+}
+
+.vehicleBadgeTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.1;
+}
+
+.vehicleBadgeSub {
+  font-size: 0.68rem;
+  color: var(--color-slate-400);
+}
+
+.floatingRateBadge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-gold-600) 100%);
+  color: #0A0F1D;
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+
+.floatRateNum {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.floatRateUnit {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Quick Route Teaser */
+.quickRoutesTeaser {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 14px 18px;
+  background: rgba(10, 16, 32, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 440px) {
+  .floatingVehicleBadge {
+    top: 10px;
+    left: 10px;
+    padding: 6px 8px;
+    gap: 6px;
+  }
+  .vehicleBadgeIcon {
+    width: 22px;
+    height: 22px;
+  }
+  .vehicleBadgeTitle {
+    font-size: 0.72rem;
+  }
+  .vehicleBadgeSub {
+    font-size: 0.62rem;
+  }
+  .floatingRateBadge {
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+  }
+  .floatRateNum {
+    font-size: 1.05rem;
+  }
+  .quickRoutesTeaser {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 10px 12px;
+  }
+  .quickRouteDivider {
+    display: none;
+  }
+  .quickRouteItem {
+    width: 45%;
+  }
+}
+
+.quickRouteItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.routeCity {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.routeFare {
+  font-size: 0.72rem;
+  color: var(--color-gold-400);
+  font-weight: 600;
+}
+
+.quickRouteDivider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+}
